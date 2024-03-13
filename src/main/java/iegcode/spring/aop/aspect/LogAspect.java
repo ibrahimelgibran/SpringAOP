@@ -41,4 +41,15 @@ public class LogAspect {
         }
     }
 
+    @Pointcut("execution(* iegcode.spring.aop.service.HelloService.*(java.lang.String))")
+    public void pointcutHelloServicesStringParam(){
+
+    }
+
+    @Before("pointcutHelloServicesStringParam()")
+    public void longStringParameter(JoinPoint joinPoint){
+        String value = (String) joinPoint.getArgs()[0];
+        log.info("Execute method with parameter " + value);
+    }
+
 }

@@ -16,4 +16,8 @@ public class HelloService {
         log.info("Call HelloService.bye()");
         return "bye " + name;
     }
+
+    public void test(){
+        log.info("Call HelloService.test()");
+    }
 }
