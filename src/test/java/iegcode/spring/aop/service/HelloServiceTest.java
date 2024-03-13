@@ -14,6 +14,7 @@ public class HelloServiceTest {
     @Test
     void helloService() {
         Assertions.assertEquals("Hello Gibran", helloService.hello("Gibran"));
+        Assertions.assertEquals("Hello Gibran Ibrahim", helloService.hello("Gibran", "Ibrahim"));
         Assertions.assertEquals("bye Gibran", helloService.bye("Gibran"));
 
         helloService.test();
